@@ -1,4 +1,3 @@
-from sre_constants import BRANCH
 
 from django.db import models
 

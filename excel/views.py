@@ -1,8 +1,6 @@
-from django_filters.rest_framework import DjangoFilterBackend
-from drf_multiple_model.views import FlatMultipleModelAPIView
+
 from rest_framework import status, generics
-from rest_framework.decorators import api_view
-from rest_framework.filters import SearchFilter
+
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
