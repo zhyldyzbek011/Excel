@@ -39,5 +39,8 @@ class StatisticSerializer(serializers.ModelSerializer):
         representation['start_cp'] = budget.start_cp
         representation['end_bud'] = budget.end_bud
         representation['es_bud'] = instance.kp_som - budget.end_bud
-        representation['es_bud'] = instance.kp_som - budget.end_bud
+        # representation['ef_bud'] = budget.end_bud / instance.kp_som * 100
+        # representation['ef_bud'] = f'{instance.kp_som / budget.end_bud * 100 } %'
+        representation['ef_bud'] = f'{round(instance.kp_som / budget.end_bud * 100), 2}%'
+
         return representation
